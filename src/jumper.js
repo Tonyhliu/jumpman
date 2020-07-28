@@ -1,4 +1,5 @@
 import { canvas, c } from "./index";
+import { jumper } from "./jumper";
 
 class Ball {
   constructor(x, y, dy, dx, radius, color) {
@@ -18,12 +19,13 @@ class Ball {
   }
 
   draw() {
-    c.beginPath();
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.fillStyle = this.color;
-    c.fill();
-    c.stroke();
-    c.closePath();
+    ctx.drawImage(jumper, 10, 10)
+//     c.beginPath();
+//     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+//     c.fillStyle = this.color;
+//     c.fill();
+//     c.stroke();
+//     c.closePath();
   }
 
   update() {
